@@ -97,6 +97,12 @@
     <Compile Include="Vista\EquipoPerifericoVista.Designer.cs">
       <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\GarantiaVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\GarantiaVista.Designer.cs">
+      <DependentUpon>GarantiaVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ListarVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EquipoPerifericoVista.resx">
       <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\GarantiaVista.resx">
+      <DependentUpon>GarantiaVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ListarVista.resx">
       <DependentUpon>ListarVista.cs</DependentUpon>

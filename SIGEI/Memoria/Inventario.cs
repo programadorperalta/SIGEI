@@ -50,12 +50,7 @@ namespace SIGEI
             _equipos.Add(new Equipo(02, 123123123, "Red Dragon", "2021", "GABINETE + PLACA MADRE YYY + FUENTE 550W", new Garantia(DateTime.Parse("2022-11-25"), DateTime.Parse("2025-11-25")), new Proveedor("Compumaq", "Responsable Inscripto", "24710035748")));
         }
 
-        public void CrearProveedores()
-        {
-
-        }
-
-        public void 
+       
 
 
         public void CrearPerifericos()
@@ -86,6 +81,10 @@ namespace SIGEI
             _empleados.Add(new Empleado(46242, "Juan Agustin", "Lopez", 39888243, _departamentos.Find(x => x.ID == 2)));
 
         }
+
+
+
+
 
         public void CrearUsuarios()
         {

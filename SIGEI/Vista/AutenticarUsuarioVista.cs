@@ -34,7 +34,7 @@ namespace SIGEI.Vista
                     
                     MessageBox.Show("Se ha iniciado la sesion con exito");
                     vistaPrincipal.Visible = true;
-                    
+                    LimpiarCampos();
                     
                 }
                 else
@@ -42,15 +42,14 @@ namespace SIGEI.Vista
                     MessageBox.Show("No se encuentra el usuario, Por favor intente nuevamente");
                 }
             }
-            
-
-
-
-
-
-
-
-
+          
         }
+
+        public void LimpiarCampos()
+        {
+            txtPass.Text ="";
+            txtUsername.Text ="";
+        }
+
     }
 }
