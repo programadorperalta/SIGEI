@@ -109,6 +109,12 @@
     <Compile Include="Vista\ListarVista.Designer.cs">
       <DependentUpon>ListarVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ProveedorVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ProveedorVista.Designer.cs">
+      <DependentUpon>ProveedorVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\UsuarioVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ListarVista.resx">
       <DependentUpon>ListarVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ProveedorVista.resx">
+      <DependentUpon>ProveedorVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\UsuarioVista.resx">
       <DependentUpon>UsuarioVista.cs</DependentUpon>

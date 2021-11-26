@@ -63,7 +63,7 @@ namespace SIGEI.Vista
             this.tituloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tituloLabel.AutoSize = true;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(330, 9);
+            this.tituloLabel.Location = new System.Drawing.Point(310, 9);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(319, 17);
@@ -86,7 +86,7 @@ namespace SIGEI.Vista
             this.panel1.Controls.Add(this.descripcionText);
             this.panel1.Controls.Add(this.codigoText);
             this.panel1.Controls.Add(this.codigoLabel);
-            this.panel1.Location = new System.Drawing.Point(48, 38);
+            this.panel1.Location = new System.Drawing.Point(26, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(938, 408);
             this.panel1.TabIndex = 7;
@@ -304,7 +304,7 @@ namespace SIGEI.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 487);
+            this.ClientSize = new System.Drawing.Size(968, 450);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.panel1);
             this.Name = "EmpleadoEquipoVista";
