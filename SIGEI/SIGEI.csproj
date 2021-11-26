@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A64E6670-FE6A-4859-8EA1-89A246E76F94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIGEI</RootNamespace>
+    <AssemblyName>SIGEI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Memoria\Inventario.cs" />
+    <Compile Include="Modelo\Almacen.cs" />
+    <Compile Include="Modelo\Auditoria.cs" />
+    <Compile Include="Modelo\Departamento.cs" />
+    <Compile Include="Modelo\Empleado.cs" />
+    <Compile Include="Modelo\Equipo.cs" />
+    <Compile Include="Modelo\Estado.cs" />
+    <Compile Include="Modelo\Garantia.cs" />
+    <Compile Include="Modelo\Periferico.cs" />
+    <Compile Include="Modelo\Proveedor.cs" />
+    <Compile Include="Modelo\Registro.cs" />
+    <Compile Include="Modelo\Rol.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\AgregarEquipoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarEquipoVista.Designer.cs">
+      <DependentUpon>AgregarEquipoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\AutenticarUsuarioVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AutenticarUsuarioVista.Designer.cs">
+      <DependentUpon>AutenticarUsuarioVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DepartamentoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DepartamentoVista.Designer.cs">
+      <DependentUpon>DepartamentoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EmpleadoEquipoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EmpleadoEquipoVista.Designer.cs">
+      <DependentUpon>EmpleadoEquipoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EmpleadoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EmpleadoVista.Designer.cs">
+      <DependentUpon>EmpleadoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EquipoPerifericoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EquipoPerifericoVista.Designer.cs">
+      <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarVista.Designer.cs">
+      <DependentUpon>ListarVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\UsuarioVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\UsuarioVista.Designer.cs">
+      <DependentUpon>UsuarioVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VistaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaPrincipal.Designer.cs">
+      <DependentUpon>VistaPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\AgregarEquipoVista.resx">
+      <DependentUpon>AgregarEquipoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AutenticarUsuarioVista.resx">
+      <DependentUpon>AutenticarUsuarioVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DepartamentoVista.resx">
+      <DependentUpon>DepartamentoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EmpleadoEquipoVista.resx">
+      <DependentUpon>EmpleadoEquipoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EmpleadoVista.resx">
+      <DependentUpon>EmpleadoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EquipoPerifericoVista.resx">
+      <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarVista.resx">
+      <DependentUpon>ListarVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\UsuarioVista.resx">
+      <DependentUpon>UsuarioVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaPrincipal.resx">
+      <DependentUpon>VistaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base de Datos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
