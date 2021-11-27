@@ -20,7 +20,8 @@ namespace SIGEI
         private List<Rol> _roles = new List<Rol>();
         private List<Almacen> _almacen = new List<Almacen>();
         private List<Registro> _registro = new List<Registro>();
-
+        private List<Proveedor> _proveedores = new List<Proveedor>();
+        private List<Garantia> _garantias = new List<Garantia>();
         /*************************************************************/
 
         
@@ -33,6 +34,8 @@ namespace SIGEI
             CargarRoles();
             CargarEmpleados();
             CrearUsuarios();
+            CargarProveedores();
+            CargarGarantias();
         }
 
         public void CargarDepartamentos()
@@ -44,14 +47,28 @@ namespace SIGEI
             _departamentos.Add(new Departamento(5,"Administracion"));
 
         }
+
+        public List<Departamento> GetDepartamentos()
+        {
+            return _departamentos.ToList();
+        }
+
+        public void AgregarDepartamento(Departamento departamento)
+        {
+            _departamentos.Add(departamento);
+        }
+
+
         public void CrearEquipos()
         {
             _equipos.Add(new Equipo(01, 88887712, "Red Dragon", "2020", "GABINETE + PLACA MADRE XXX + FUENTE 600W", new Garantia(DateTime.Parse("2020-11-25"), DateTime.Parse("2022-11-25")), new Proveedor("Compumaq", "Responsable Inscripto", "24710035748")));
             _equipos.Add(new Equipo(02, 123123123, "Red Dragon", "2021", "GABINETE + PLACA MADRE YYY + FUENTE 550W", new Garantia(DateTime.Parse("2022-11-25"), DateTime.Parse("2025-11-25")), new Proveedor("Compumaq", "Responsable Inscripto", "24710035748")));
         }
 
-       
-
+        public List<Periferico> GetPerifericos()
+        {
+            return _perifericos.ToList();
+        }
 
         public void CrearPerifericos()
         {
@@ -82,8 +99,26 @@ namespace SIGEI
 
         }
 
+        public void CargarProveedores()
+        {
+            _proveedores.Add(new Proveedor("Compumaq", "Responsable Inscripto", "24710035748"));
+        }
 
+        public List<Proveedor> GetProveedores()
+        {
+            return _proveedores.ToList();
+        }
 
+        public void CargarGarantias()
+        {
+            _garantias.Add(new Garantia(DateTime.Parse("2020-11-25"), DateTime.Parse("2022-11-25")));
+        }
+
+        public List<Garantia> GetGarantias()
+        {
+            return _garantias.ToList();
+        }
+        
 
 
         public void CrearUsuarios()

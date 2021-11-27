@@ -43,5 +43,32 @@ namespace SIGEI.Vista
             vistaUsuarios.MdiParent = this;
             vistaUsuarios.Show();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vistaProveedores = new ProveedorVista();
+            vistaProveedores.MdiParent = this;
+            vistaProveedores.Show();
+
+        }
+
+        private void garantiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vistaGarantias = new GarantiaVista();
+            vistaGarantias.MdiParent = this;
+            vistaGarantias.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vistaDepartamentos = new DepartamentoVista();
+            vistaDepartamentos.MdiParent = this;
+            vistaDepartamentos.Show();
+        }
     }
 }

@@ -86,7 +86,7 @@ namespace SIGEI.Vista
             this.panel1.Controls.Add(this.descripcionText);
             this.panel1.Controls.Add(this.codigoText);
             this.panel1.Controls.Add(this.codigoLabel);
-            this.panel1.Location = new System.Drawing.Point(26, 29);
+            this.panel1.Location = new System.Drawing.Point(12, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(938, 408);
             this.panel1.TabIndex = 7;

@@ -29,24 +29,31 @@ namespace SIGEI.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbPeriferico = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbEquipo = new System.Windows.Forms.RadioButton();
             this.confirmarBoton = new System.Windows.Forms.Button();
             this.ivaLabel = new System.Windows.Forms.Label();
             this.baseLabel = new System.Windows.Forms.Label();
             this.descripcionLabel = new System.Windows.Forms.Label();
-            this.ivaText = new System.Windows.Forms.TextBox();
-            this.precioBaseText = new System.Windows.Forms.TextBox();
-            this.descripcionText = new System.Windows.Forms.TextBox();
-            this.codigoText = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNserie = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbGarantia = new System.Windows.Forms.ComboBox();
+            this.cbProveedor = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.bsGarantias = new System.Windows.Forms.BindingSource(this.components);
+            this.bsProveedores = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsGarantias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -87,16 +94,17 @@ namespace SIGEI.Vista
             this.label2.Text = "Garantia:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // radioButton2
+            // rbPeriferico
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(189, 96);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 17);
-            this.radioButton2.TabIndex = 43;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Periferico";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPeriferico.AutoSize = true;
+            this.rbPeriferico.Location = new System.Drawing.Point(189, 96);
+            this.rbPeriferico.Name = "rbPeriferico";
+            this.rbPeriferico.Size = new System.Drawing.Size(69, 17);
+            this.rbPeriferico.TabIndex = 43;
+            this.rbPeriferico.TabStop = true;
+            this.rbPeriferico.Text = "Periferico";
+            this.rbPeriferico.UseVisualStyleBackColor = true;
+            this.rbPeriferico.CheckedChanged += new System.EventHandler(this.rbPeriferico_CheckedChanged);
             // 
             // label1
             // 
@@ -111,16 +119,17 @@ namespace SIGEI.Vista
             this.label1.TabIndex = 42;
             this.label1.Text = "Nuevo:";
             // 
-            // radioButton1
+            // rbEquipo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(189, 73);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 17);
-            this.radioButton1.TabIndex = 41;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Equipo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbEquipo.AutoSize = true;
+            this.rbEquipo.Location = new System.Drawing.Point(189, 73);
+            this.rbEquipo.Name = "rbEquipo";
+            this.rbEquipo.Size = new System.Drawing.Size(58, 17);
+            this.rbEquipo.TabIndex = 41;
+            this.rbEquipo.TabStop = true;
+            this.rbEquipo.Text = "Equipo";
+            this.rbEquipo.UseVisualStyleBackColor = true;
+            this.rbEquipo.CheckedChanged += new System.EventHandler(this.rbEquipo_CheckedChanged);
             // 
             // confirmarBoton
             // 
@@ -132,6 +141,7 @@ namespace SIGEI.Vista
             this.confirmarBoton.TabIndex = 37;
             this.confirmarBoton.Text = "Confirmar";
             this.confirmarBoton.UseVisualStyleBackColor = true;
+            this.confirmarBoton.Click += new System.EventHandler(this.confirmarBoton_Click);
             // 
             // ivaLabel
             // 
@@ -139,7 +149,7 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ivaLabel.AutoSize = true;
-            this.ivaLabel.Location = new System.Drawing.Point(107, 210);
+            this.ivaLabel.Location = new System.Drawing.Point(107, 228);
             this.ivaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ivaLabel.Name = "ivaLabel";
             this.ivaLabel.Size = new System.Drawing.Size(45, 13);
@@ -152,7 +162,7 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.baseLabel.AutoSize = true;
-            this.baseLabel.Location = new System.Drawing.Point(106, 185);
+            this.baseLabel.Location = new System.Drawing.Point(106, 203);
             this.baseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baseLabel.Name = "baseLabel";
             this.baseLabel.Size = new System.Drawing.Size(40, 13);
@@ -165,56 +175,56 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.descripcionLabel.AutoSize = true;
-            this.descripcionLabel.Location = new System.Drawing.Point(106, 163);
+            this.descripcionLabel.Location = new System.Drawing.Point(106, 181);
             this.descripcionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.descripcionLabel.Name = "descripcionLabel";
             this.descripcionLabel.Size = new System.Drawing.Size(66, 13);
             this.descripcionLabel.TabIndex = 38;
             this.descripcionLabel.Text = "Descripcion:";
             // 
-            // ivaText
+            // txtModelo
             // 
-            this.ivaText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ivaText.Location = new System.Drawing.Point(189, 207);
-            this.ivaText.Margin = new System.Windows.Forms.Padding(2);
-            this.ivaText.Name = "ivaText";
-            this.ivaText.Size = new System.Drawing.Size(398, 20);
-            this.ivaText.TabIndex = 36;
+            this.txtModelo.Location = new System.Drawing.Point(189, 225);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(398, 20);
+            this.txtModelo.TabIndex = 36;
             // 
-            // precioBaseText
+            // txtMarca
             // 
-            this.precioBaseText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.precioBaseText.Location = new System.Drawing.Point(189, 183);
-            this.precioBaseText.Margin = new System.Windows.Forms.Padding(2);
-            this.precioBaseText.Name = "precioBaseText";
-            this.precioBaseText.Size = new System.Drawing.Size(398, 20);
-            this.precioBaseText.TabIndex = 35;
+            this.txtMarca.Location = new System.Drawing.Point(189, 201);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(398, 20);
+            this.txtMarca.TabIndex = 35;
             // 
-            // descripcionText
+            // txtDescripcion
             // 
-            this.descripcionText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.descripcionText.Location = new System.Drawing.Point(189, 161);
-            this.descripcionText.Margin = new System.Windows.Forms.Padding(2);
-            this.descripcionText.Name = "descripcionText";
-            this.descripcionText.Size = new System.Drawing.Size(398, 20);
-            this.descripcionText.TabIndex = 33;
+            this.txtDescripcion.Location = new System.Drawing.Point(189, 179);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(398, 20);
+            this.txtDescripcion.TabIndex = 33;
             // 
-            // codigoText
+            // txtNserie
             // 
-            this.codigoText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNserie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.codigoText.Location = new System.Drawing.Point(189, 137);
-            this.codigoText.Margin = new System.Windows.Forms.Padding(2);
-            this.codigoText.Name = "codigoText";
-            this.codigoText.Size = new System.Drawing.Size(398, 20);
-            this.codigoText.TabIndex = 32;
+            this.txtNserie.Location = new System.Drawing.Point(189, 155);
+            this.txtNserie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNserie.Name = "txtNserie";
+            this.txtNserie.Size = new System.Drawing.Size(398, 20);
+            this.txtNserie.TabIndex = 32;
             // 
             // codigoLabel
             // 
@@ -222,7 +232,7 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.codigoLabel.AutoSize = true;
-            this.codigoLabel.Location = new System.Drawing.Point(106, 140);
+            this.codigoLabel.Location = new System.Drawing.Point(106, 158);
             this.codigoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.codigoLabel.Name = "codigoLabel";
             this.codigoLabel.Size = new System.Drawing.Size(49, 13);
@@ -241,47 +251,89 @@ namespace SIGEI.Vista
             this.tituloLabel.TabIndex = 31;
             this.tituloLabel.Text = "ALTA DE EQUIPO/PERIFERICO";
             // 
-            // comboBox1
+            // cbGarantia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(189, 252);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 21);
-            this.comboBox1.TabIndex = 50;
+            this.cbGarantia.DataSource = this.bsGarantias;
+            this.cbGarantia.DisplayMember = "FechaFinalizacion";
+            this.cbGarantia.FormattingEnabled = true;
+            this.cbGarantia.Location = new System.Drawing.Point(189, 252);
+            this.cbGarantia.Name = "cbGarantia";
+            this.cbGarantia.Size = new System.Drawing.Size(162, 21);
+            this.cbGarantia.TabIndex = 50;
+            this.cbGarantia.ValueMember = "FechadeAdquisicion";
             // 
-            // comboBox2
+            // cbProveedor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 309);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 21);
-            this.comboBox2.TabIndex = 51;
+            this.cbProveedor.DataSource = this.bsProveedores;
+            this.cbProveedor.DisplayMember = "Nombre";
+            this.cbProveedor.FormattingEnabled = true;
+            this.cbProveedor.Location = new System.Drawing.Point(189, 309);
+            this.cbProveedor.Name = "cbProveedor";
+            this.cbProveedor.Size = new System.Drawing.Size(162, 21);
+            this.cbProveedor.TabIndex = 51;
+            this.cbProveedor.ValueMember = "Cuit";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(107, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Codigo:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigo.Location = new System.Drawing.Point(189, 129);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(162, 20);
+            this.txtCodigo.TabIndex = 53;
+            // 
+            // bsGarantias
+            // 
+            this.bsGarantias.DataSource = typeof(SIGEI.Garantia);
+            // 
+            // bsProveedores
+            // 
+            this.bsProveedores.DataSource = typeof(SIGEI.Proveedor);
             // 
             // AgregarEquipoVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 382);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbProveedor);
+            this.Controls.Add(this.cbGarantia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rbPeriferico);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbEquipo);
             this.Controls.Add(this.confirmarBoton);
             this.Controls.Add(this.ivaLabel);
             this.Controls.Add(this.baseLabel);
             this.Controls.Add(this.descripcionLabel);
-            this.Controls.Add(this.ivaText);
-            this.Controls.Add(this.precioBaseText);
-            this.Controls.Add(this.descripcionText);
-            this.Controls.Add(this.codigoText);
+            this.Controls.Add(this.txtModelo);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNserie);
             this.Controls.Add(this.codigoLabel);
             this.Controls.Add(this.tituloLabel);
             this.Name = "AgregarEquipoVista";
             this.Text = "AgregarEquipoVista";
+            ((System.ComponentModel.ISupportInitialize)(this.bsGarantias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,20 +343,24 @@ namespace SIGEI.Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbPeriferico;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbEquipo;
         private System.Windows.Forms.Button confirmarBoton;
         private System.Windows.Forms.Label ivaLabel;
         private System.Windows.Forms.Label baseLabel;
         private System.Windows.Forms.Label descripcionLabel;
-        private System.Windows.Forms.TextBox ivaText;
-        private System.Windows.Forms.TextBox precioBaseText;
-        private System.Windows.Forms.TextBox descripcionText;
-        private System.Windows.Forms.TextBox codigoText;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNserie;
         private System.Windows.Forms.Label codigoLabel;
         private System.Windows.Forms.Label tituloLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbGarantia;
+        private System.Windows.Forms.ComboBox cbProveedor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.BindingSource bsGarantias;
+        private System.Windows.Forms.BindingSource bsProveedores;
     }
 }

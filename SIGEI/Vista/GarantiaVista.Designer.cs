@@ -30,13 +30,13 @@ namespace SIGEI.Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.descripcionLabel = new System.Windows.Forms.Label();
             this.confirmarBoton = new System.Windows.Forms.Button();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,20 @@ namespace SIGEI.Vista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 141);
             this.panel1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(134, 63);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 23;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 22;
             // 
             // button2
             // 
@@ -107,26 +121,12 @@ namespace SIGEI.Vista
             this.tituloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tituloLabel.AutoSize = true;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(295, 36);
+            this.tituloLabel.Location = new System.Drawing.Point(280, 36);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(154, 17);
+            this.tituloLabel.Size = new System.Drawing.Size(196, 17);
             this.tituloLabel.TabIndex = 11;
-            this.tituloLabel.Text = "GESTIONAR AREAS";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 22;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(134, 63);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 23;
+            this.tituloLabel.Text = "GESTIONAR GARANTIAS:";
             // 
             // dateTimePicker3
             // 

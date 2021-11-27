@@ -16,3 +16,5 @@ C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EquipoPerifer
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.UsuarioVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.VistaPrincipal.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.GarantiaVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ProveedorVista.resources

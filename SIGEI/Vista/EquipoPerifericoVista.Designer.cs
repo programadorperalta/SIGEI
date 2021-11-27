@@ -63,7 +63,7 @@ namespace SIGEI.Vista
             this.tituloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tituloLabel.AutoSize = true;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(423, 22);
+            this.tituloLabel.Location = new System.Drawing.Point(418, 9);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(164, 17);
@@ -86,7 +86,7 @@ namespace SIGEI.Vista
             this.panel1.Controls.Add(this.descripcionText);
             this.panel1.Controls.Add(this.codigoText);
             this.panel1.Controls.Add(this.codigoLabel);
-            this.panel1.Location = new System.Drawing.Point(34, 73);
+            this.panel1.Location = new System.Drawing.Point(29, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(938, 408);
             this.panel1.TabIndex = 6;
