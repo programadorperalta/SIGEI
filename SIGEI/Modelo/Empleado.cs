@@ -8,40 +8,14 @@ namespace SIGEI
 {
     public class Empleado
     {
-        #region Atributes
-        private int _legajo;
-        private string _nombre;
-        private string _apellido;
-        private int _dni;
-        private Departamento _departamento;
-        #endregion
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Legajo { get; set; }
+        public string Dni { get; set; }
+        public int IdEquipo { get; set; }
+        public int IdDepartamento { get; set; }
 
-        #region Constructores 
-
-        public Empleado()
-        {
-
-        }
-        
-        public Empleado(int legajo,string nombre, string apellido, int dni, Departamento departamento)
-        {
-            Legajo = legajo;
-            Nombre = nombre;
-            Apellido = Apellido;
-            DNI = dni;
-            Departamento = departamento;
-        }
-
-
-        #endregion
-
-        #region Propiedades
-        public int Legajo { get { return _legajo; } set { _legajo = value; } }
-        public string Nombre { get { return _nombre; } set { _nombre = value; } }
-        public string Apellido { get { return _apellido; } set { _apellido = value; } }
-        public int DNI { get { return _dni; } set { _dni = value; } }
-        public Departamento Departamento { get { return _departamento; } set { _departamento = value; } }
-        #endregion
-
+        public virtual Departamento Departamento { get; set; }
     }
 }

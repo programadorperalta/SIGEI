@@ -48,11 +48,9 @@ namespace SIGEI.Vista
             this.tituloLabel = new System.Windows.Forms.Label();
             this.cbGarantia = new System.Windows.Forms.ComboBox();
             this.cbProveedor = new System.Windows.Forms.ComboBox();
+            this.bsProveedores = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.bsGarantias = new System.Windows.Forms.BindingSource(this.components);
-            this.bsProveedores = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bsGarantias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -253,8 +251,6 @@ namespace SIGEI.Vista
             // 
             // cbGarantia
             // 
-            this.cbGarantia.DataSource = this.bsGarantias;
-            this.cbGarantia.DisplayMember = "FechaFinalizacion";
             this.cbGarantia.FormattingEnabled = true;
             this.cbGarantia.Location = new System.Drawing.Point(189, 252);
             this.cbGarantia.Name = "cbGarantia";
@@ -272,6 +268,10 @@ namespace SIGEI.Vista
             this.cbProveedor.Size = new System.Drawing.Size(162, 21);
             this.cbProveedor.TabIndex = 51;
             this.cbProveedor.ValueMember = "Cuit";
+            // 
+            // bsProveedores
+            // 
+            this.bsProveedores.DataSource = typeof(SIGEI.Proveedor);
             // 
             // label4
             // 
@@ -296,14 +296,6 @@ namespace SIGEI.Vista
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(162, 20);
             this.txtCodigo.TabIndex = 53;
-            // 
-            // bsGarantias
-            // 
-            this.bsGarantias.DataSource = typeof(SIGEI.Garantia);
-            // 
-            // bsProveedores
-            // 
-            this.bsProveedores.DataSource = typeof(SIGEI.Proveedor);
             // 
             // AgregarEquipoVista
             // 
@@ -332,7 +324,6 @@ namespace SIGEI.Vista
             this.Controls.Add(this.tituloLabel);
             this.Name = "AgregarEquipoVista";
             this.Text = "AgregarEquipoVista";
-            ((System.ComponentModel.ISupportInitialize)(this.bsGarantias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -360,7 +351,6 @@ namespace SIGEI.Vista
         private System.Windows.Forms.ComboBox cbProveedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.BindingSource bsGarantias;
         private System.Windows.Forms.BindingSource bsProveedores;
     }
 }

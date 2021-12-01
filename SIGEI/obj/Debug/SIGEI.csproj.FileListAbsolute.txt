@@ -18,3 +18,29 @@ C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.UsuarioVista.
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.VistaPrincipal.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.GarantiaVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ProveedorVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.AssemblyReference.cache
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Properties.Resources.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.AgregarEquipoVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.AutenticarUsuarioVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.DepartamentoVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EmpleadoEquipoVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EmpleadoVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EquipoPerifericoVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.GarantiaVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ProveedorVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.UsuarioVista.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.VistaPrincipal.resources
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.GenerateResource.cache
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.CoreCompileInputs.cache
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.exe
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.pdb
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\SIGEI.exe.config
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\SIGEI.exe
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\SIGEI.pdb
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFramework.dll
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.dll
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFramework.xml
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.xml
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.CopyComplete
+D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Migrations.FirstCommit.resources

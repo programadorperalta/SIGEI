@@ -12,7 +12,7 @@ namespace SIGEI.Vista
 {
     public partial class DepartamentoVista : Form
     {
-        private Inventario _inventario = new Inventario();
+        //private Inventario _inventario = new Inventario();
         public DepartamentoVista()
         {
             InitializeComponent();
@@ -22,9 +22,9 @@ namespace SIGEI.Vista
         {
             if (ControlarCampos())
             {
-                var departamento = new Departamento(Int32.Parse(txtIDepartamento.Text),txtNombreDepartamento.Text);
-                _inventario.AgregarDepartamento(departamento);
-                MessageBox.Show(""+_inventario.GetDepartamentos());
+                //var departamento = new Departamento(Int32.Parse(txtIDepartamento.Text),txtNombreDepartamento.Text);
+                //_inventario.AgregarDepartamento(departamento);
+                //MessageBox.Show(""+_inventario.GetDepartamentos());
             }
         }
 
