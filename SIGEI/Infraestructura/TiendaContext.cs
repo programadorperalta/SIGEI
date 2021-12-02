@@ -10,7 +10,7 @@ namespace SIGEI.Infraestructura
 {
     public class TiendaContext : DbContext
     {
-        public TiendaContext() : base("Tienda")
+        public TiendaContext() : base("name=SIGEI1Entities")
         {
 
         }

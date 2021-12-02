@@ -44,3 +44,9 @@ D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFra
 D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.xml
 D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.CopyComplete
 D:\UTN\Administracion de Recursos\TFI\Codigo TFI\SIGEI\SIGEI\obj\Debug\SIGEI.Migrations.FirstCommit.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.dll
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.xml
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.CopyComplete
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Migrations.FirstCommit.resources

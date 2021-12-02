@@ -13,7 +13,7 @@ namespace SIGEI.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202112012348424_FirstCommit"; }
+            get { return "202112020047282_FirstCommit"; }
         }
         
         string IMigrationMetadata.Source

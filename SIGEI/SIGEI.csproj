@@ -56,11 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base de Datos\Repositorio.cs" />
     <Compile Include="Infraestructura\TiendaContext.cs" />
     <Compile Include="Memoria\Inventario.cs" />
-    <Compile Include="Migrations\202112012348424_FirstCommit.cs" />
-    <Compile Include="Migrations\202112012348424_FirstCommit.designer.cs">
-      <DependentUpon>202112012348424_FirstCommit.cs</DependentUpon>
+    <Compile Include="Migrations\202112020047282_FirstCommit.cs" />
+    <Compile Include="Migrations\202112020047282_FirstCommit.designer.cs">
+      <DependentUpon>202112020047282_FirstCommit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auditoria.cs" />
@@ -140,8 +141,8 @@
     <Compile Include="Vista\VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202112012348424_FirstCommit.resx">
-      <DependentUpon>202112012348424_FirstCommit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112020047282_FirstCommit.resx">
+      <DependentUpon>202112020047282_FirstCommit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,9 +202,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base de Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
