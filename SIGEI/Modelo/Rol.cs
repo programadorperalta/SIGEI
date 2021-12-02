@@ -8,27 +8,8 @@ namespace SIGEI
 {
     public class Rol
     {
-        #region Atributes
-        private string _nombre;
-        private string _descripcion;
-        #endregion
-
-        #region Constructores
-        public Rol()
-        {
-
-        }
-
-        public Rol(string nombre, string descripcion)
-        {
-            this.Nombre = nombre;
-            this.Descripcion = descripcion;
-        }
-        #endregion
-
-        #region Propiedades
-        public string Nombre { get { return _nombre; } set { _nombre = value; } }
-        public string Descripcion { get { return _descripcion; } set { _descripcion = value; } }
-        #endregion
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
     }
 }
