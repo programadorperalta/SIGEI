@@ -29,7 +29,6 @@ namespace SIGEI.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,12 +45,15 @@ namespace SIGEI.Vista
             this.txtNserie = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
-            this.cbGarantia = new System.Windows.Forms.ComboBox();
             this.cbProveedor = new System.Windows.Forms.ComboBox();
-            this.bsProveedores = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpFechaAlta = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -60,7 +62,7 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 318);
+            this.label3.Location = new System.Drawing.Point(107, 446);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
@@ -70,7 +72,7 @@ namespace SIGEI.Vista
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(630, 349);
+            this.button2.Location = new System.Drawing.Point(581, 436);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 22);
@@ -84,7 +86,7 @@ namespace SIGEI.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 261);
+            this.label2.Location = new System.Drawing.Point(2, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
@@ -132,7 +134,7 @@ namespace SIGEI.Vista
             // confirmarBoton
             // 
             this.confirmarBoton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.confirmarBoton.Location = new System.Drawing.Point(716, 348);
+            this.confirmarBoton.Location = new System.Drawing.Point(683, 436);
             this.confirmarBoton.Margin = new System.Windows.Forms.Padding(2);
             this.confirmarBoton.Name = "confirmarBoton";
             this.confirmarBoton.Size = new System.Drawing.Size(73, 22);
@@ -188,7 +190,7 @@ namespace SIGEI.Vista
             this.txtModelo.Location = new System.Drawing.Point(189, 225);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(2);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(398, 20);
+            this.txtModelo.Size = new System.Drawing.Size(365, 20);
             this.txtModelo.TabIndex = 36;
             // 
             // txtMarca
@@ -199,7 +201,7 @@ namespace SIGEI.Vista
             this.txtMarca.Location = new System.Drawing.Point(189, 201);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(398, 20);
+            this.txtMarca.Size = new System.Drawing.Size(365, 20);
             this.txtMarca.TabIndex = 35;
             // 
             // txtDescripcion
@@ -210,7 +212,7 @@ namespace SIGEI.Vista
             this.txtDescripcion.Location = new System.Drawing.Point(189, 179);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(398, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(365, 20);
             this.txtDescripcion.TabIndex = 33;
             // 
             // txtNserie
@@ -221,7 +223,7 @@ namespace SIGEI.Vista
             this.txtNserie.Location = new System.Drawing.Point(189, 155);
             this.txtNserie.Margin = new System.Windows.Forms.Padding(2);
             this.txtNserie.Name = "txtNserie";
-            this.txtNserie.Size = new System.Drawing.Size(398, 20);
+            this.txtNserie.Size = new System.Drawing.Size(365, 20);
             this.txtNserie.TabIndex = 32;
             // 
             // codigoLabel
@@ -242,36 +244,21 @@ namespace SIGEI.Vista
             this.tituloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tituloLabel.AutoSize = true;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(295, 28);
+            this.tituloLabel.Location = new System.Drawing.Point(278, 28);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(233, 17);
             this.tituloLabel.TabIndex = 31;
             this.tituloLabel.Text = "ALTA DE EQUIPO/PERIFERICO";
             // 
-            // cbGarantia
-            // 
-            this.cbGarantia.FormattingEnabled = true;
-            this.cbGarantia.Location = new System.Drawing.Point(189, 252);
-            this.cbGarantia.Name = "cbGarantia";
-            this.cbGarantia.Size = new System.Drawing.Size(162, 21);
-            this.cbGarantia.TabIndex = 50;
-            this.cbGarantia.ValueMember = "FechadeAdquisicion";
-            // 
             // cbProveedor
             // 
-            this.cbProveedor.DataSource = this.bsProveedores;
-            this.cbProveedor.DisplayMember = "Nombre";
             this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(189, 309);
+            this.cbProveedor.Location = new System.Drawing.Point(189, 438);
             this.cbProveedor.Name = "cbProveedor";
             this.cbProveedor.Size = new System.Drawing.Size(162, 21);
             this.cbProveedor.TabIndex = 51;
             this.cbProveedor.ValueMember = "Cuit";
-            // 
-            // bsProveedores
-            // 
-            this.bsProveedores.DataSource = typeof(SIGEI.Proveedor);
             // 
             // label4
             // 
@@ -294,21 +281,73 @@ namespace SIGEI.Vista
             this.txtCodigo.Location = new System.Drawing.Point(189, 129);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(162, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(129, 20);
             this.txtCodigo.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 37);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "FechaAlta:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 67);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 13);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Fecha de vencimiento:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Controls.Add(this.dtpFechaVencimiento);
+            this.panel1.Controls.Add(this.dtpFechaAlta);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(109, 279);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(349, 131);
+            this.panel1.TabIndex = 58;
+            // 
+            // dtpFechaAlta
+            // 
+            this.dtpFechaAlta.Location = new System.Drawing.Point(121, 31);
+            this.dtpFechaAlta.Name = "dtpFechaAlta";
+            this.dtpFechaAlta.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaAlta.TabIndex = 59;
+            // 
+            // dtpFechaVencimiento
+            // 
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(121, 61);
+            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaVencimiento.TabIndex = 60;
             // 
             // AgregarEquipoVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 382);
+            this.ClientSize = new System.Drawing.Size(767, 479);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbProveedor);
-            this.Controls.Add(this.cbGarantia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.rbPeriferico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbEquipo);
@@ -317,14 +356,15 @@ namespace SIGEI.Vista
             this.Controls.Add(this.baseLabel);
             this.Controls.Add(this.descripcionLabel);
             this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNserie);
             this.Controls.Add(this.codigoLabel);
             this.Controls.Add(this.tituloLabel);
+            this.Controls.Add(this.txtMarca);
             this.Name = "AgregarEquipoVista";
             this.Text = "AgregarEquipoVista";
-            ((System.ComponentModel.ISupportInitialize)(this.bsProveedores)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,10 +387,13 @@ namespace SIGEI.Vista
         private System.Windows.Forms.TextBox txtNserie;
         private System.Windows.Forms.Label codigoLabel;
         private System.Windows.Forms.Label tituloLabel;
-        private System.Windows.Forms.ComboBox cbGarantia;
         private System.Windows.Forms.ComboBox cbProveedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.BindingSource bsProveedores;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaAlta;
     }
 }

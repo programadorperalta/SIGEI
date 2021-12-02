@@ -31,7 +31,6 @@ namespace SIGEI.Infraestructura
         public DbSet<Equipo> Producto { get; set; }
         public DbSet<EquipoPeriferico> EquipoPerifericos { get; set; }
         public DbSet<Periferico> Periferico { get; set; }
-        public DbSet<Rol> Rol { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }

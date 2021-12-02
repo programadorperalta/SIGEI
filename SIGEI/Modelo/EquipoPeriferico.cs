@@ -7,9 +7,6 @@ namespace SIGEI
     public class EquipoPeriferico
     {
         public int Id { get; set; }
-        public int IdEquipo { get; set; }
-
-        public int IdPeriferico { get; set; }
         public DateTime FechaAlta { get; set; }
         public DateTime? FechaBaja { get; set; }
 

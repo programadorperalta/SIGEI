@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIGEI.Base_de_Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,14 @@ namespace SIGEI.Vista
 {
     public partial class AgregarEquipoVista : Form
     {
-        //private Inventario _inventario = new Inventario();
-        private string Seleccion { get; set; }
+
+        private Repositorio _repositorio;
 
         public AgregarEquipoVista()
         {
             InitializeComponent();
+            _repositorio = new Repositorio();
             DeshabilitarCampos(false);
-            //cbGarantia.DataSource = _inventario.GetGarantias();
-            //cbProveedor.DataSource = _inventario.GetProveedores();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -38,7 +38,6 @@ namespace SIGEI.Vista
             txtDescripcion.Enabled = bandera;
             txtMarca.Enabled = bandera;
             txtModelo.Enabled = bandera;
-            cbGarantia.Enabled = bandera;
             cbProveedor.Enabled = bandera;
 
         }

@@ -13,9 +13,11 @@ namespace SIGEI
         public string Apellido { get; set; }
         public int Legajo { get; set; }
         public string Dni { get; set; }
-        public int IdEquipo { get; set; }
-        public int IdDepartamento { get; set; }
+        public Equipo Equipo { get; set;  }
 
         public virtual Departamento Departamento { get; set; }
+
+
+
     }
 }

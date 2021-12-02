@@ -30,13 +30,13 @@ namespace SIGEI.Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCuit = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.baseLabel = new System.Windows.Forms.Label();
             this.descripcionLabel = new System.Windows.Forms.Label();
             this.confirmarBoton = new System.Windows.Forms.Button();
-            this.descripcionText = new System.Windows.Forms.TextBox();
-            this.codigoText = new System.Windows.Forms.TextBox();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -44,29 +44,29 @@ namespace SIGEI.Vista
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtCuit);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.baseLabel);
             this.panel1.Controls.Add(this.descripcionLabel);
             this.panel1.Controls.Add(this.confirmarBoton);
-            this.panel1.Controls.Add(this.descripcionText);
-            this.panel1.Controls.Add(this.codigoText);
+            this.panel1.Controls.Add(this.txtRazonSocial);
+            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.codigoLabel);
-            this.panel1.Location = new System.Drawing.Point(60, 59);
+            this.panel1.Location = new System.Drawing.Point(61, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 190);
             this.panel1.TabIndex = 12;
             // 
-            // textBox1
+            // txtCuit
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCuit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(125, 86);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(464, 20);
-            this.textBox1.TabIndex = 22;
+            this.txtCuit.Location = new System.Drawing.Point(125, 86);
+            this.txtCuit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(464, 20);
+            this.txtCuit.TabIndex = 22;
             // 
             // button2
             // 
@@ -78,6 +78,7 @@ namespace SIGEI.Vista
             this.button2.TabIndex = 21;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // baseLabel
             // 
@@ -115,28 +116,29 @@ namespace SIGEI.Vista
             this.confirmarBoton.TabIndex = 20;
             this.confirmarBoton.Text = "Confirmar";
             this.confirmarBoton.UseVisualStyleBackColor = true;
+            this.confirmarBoton.Click += new System.EventHandler(this.confirmarBoton_Click);
             // 
-            // descripcionText
+            // txtRazonSocial
             // 
-            this.descripcionText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.descripcionText.Location = new System.Drawing.Point(125, 57);
-            this.descripcionText.Margin = new System.Windows.Forms.Padding(2);
-            this.descripcionText.Name = "descripcionText";
-            this.descripcionText.Size = new System.Drawing.Size(464, 20);
-            this.descripcionText.TabIndex = 12;
+            this.txtRazonSocial.Location = new System.Drawing.Point(125, 57);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(464, 20);
+            this.txtRazonSocial.TabIndex = 12;
             // 
-            // codigoText
+            // txtNombre
             // 
-            this.codigoText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.codigoText.Location = new System.Drawing.Point(125, 32);
-            this.codigoText.Margin = new System.Windows.Forms.Padding(2);
-            this.codigoText.Name = "codigoText";
-            this.codigoText.Size = new System.Drawing.Size(464, 20);
-            this.codigoText.TabIndex = 11;
+            this.txtNombre.Location = new System.Drawing.Point(125, 32);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(464, 20);
+            this.txtNombre.TabIndex = 11;
             // 
             // codigoLabel
             // 
@@ -167,6 +169,7 @@ namespace SIGEI.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(772, 281);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tituloLabel);
@@ -182,13 +185,13 @@ namespace SIGEI.Vista
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label baseLabel;
         private System.Windows.Forms.Label descripcionLabel;
         private System.Windows.Forms.Button confirmarBoton;
-        private System.Windows.Forms.TextBox descripcionText;
-        private System.Windows.Forms.TextBox codigoText;
+        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label codigoLabel;
         private System.Windows.Forms.Label tituloLabel;
     }

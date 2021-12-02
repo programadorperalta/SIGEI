@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class FirstCommit : DbMigration
+    public partial class NuevasEntidades : DbMigration
     {
         public override void Up()
         {
@@ -36,10 +36,8 @@
                         Apellido = c.String(),
                         Legajo = c.Int(nullable: false),
                         Dni = c.String(),
-                        IdEquipo = c.Int(nullable: false),
-                        IdDepartamento = c.Int(nullable: false),
                         Departamento_Id = c.Int(),
-                        Equipo_Id = c.Int(),
+                        Equipo_Id = c.Int(nullable: true),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Departamento", t => t.Departamento_Id)
@@ -57,8 +55,6 @@
                         Model = c.String(),
                         FechaAlta = c.DateTime(nullable: false),
                         FechaVencimientoGarantia = c.DateTime(nullable: false),
-                        IdProveedor = c.Int(nullable: false),
-                        IdDepartamento = c.Int(nullable: false),
                         Departamento_Id = c.Int(),
                         Proveedor_Id = c.Int(),
                     })
@@ -73,8 +69,6 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        IdEquipo = c.Int(nullable: false),
-                        IdPeriferico = c.Int(nullable: false),
                         FechaAlta = c.DateTime(nullable: false),
                         FechaBaja = c.DateTime(),
                         Equipo_Id = c.Int(),
@@ -114,36 +108,23 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Rol",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(),
-                        Descripcion = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
                 "dbo.Usuario",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Nick = c.String(),
                         Contraseña = c.String(),
+                        Permiso = c.String(),
                         Empleado_Id = c.Int(),
-                        Rol_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Empleado", t => t.Empleado_Id)
-                .ForeignKey("dbo.Rol", t => t.Rol_Id)
-                .Index(t => t.Empleado_Id)
-                .Index(t => t.Rol_Id);
+                .Index(t => t.Empleado_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Usuario", "Rol_Id", "dbo.Rol");
             DropForeignKey("dbo.Usuario", "Empleado_Id", "dbo.Empleado");
             DropForeignKey("dbo.Periferico", "Proveedor_Id", "dbo.Proveedor");
             DropForeignKey("dbo.Equipo", "Proveedor_Id", "dbo.Proveedor");
@@ -152,7 +133,6 @@
             DropForeignKey("dbo.Empleado", "Equipo_Id", "dbo.Equipo");
             DropForeignKey("dbo.Equipo", "Departamento_Id", "dbo.Departamento");
             DropForeignKey("dbo.Empleado", "Departamento_Id", "dbo.Departamento");
-            DropIndex("dbo.Usuario", new[] { "Rol_Id" });
             DropIndex("dbo.Usuario", new[] { "Empleado_Id" });
             DropIndex("dbo.Periferico", new[] { "Proveedor_Id" });
             DropIndex("dbo.EquipoPeriferico", new[] { "Periferico_Id" });
@@ -162,7 +142,6 @@
             DropIndex("dbo.Empleado", new[] { "Equipo_Id" });
             DropIndex("dbo.Empleado", new[] { "Departamento_Id" });
             DropTable("dbo.Usuario");
-            DropTable("dbo.Rol");
             DropTable("dbo.Proveedor");
             DropTable("dbo.Periferico");
             DropTable("dbo.EquipoPeriferico");

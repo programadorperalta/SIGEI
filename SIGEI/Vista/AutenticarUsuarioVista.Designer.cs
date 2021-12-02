@@ -29,6 +29,7 @@ namespace SIGEI.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tituloLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,7 +37,9 @@ namespace SIGEI.Vista
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
+            this.bsUsuario = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // tituloLabel
@@ -92,6 +95,7 @@ namespace SIGEI.Vista
             this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsUsuario, "Contraseña", true));
             this.txtPass.Location = new System.Drawing.Point(125, 57);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
@@ -103,6 +107,7 @@ namespace SIGEI.Vista
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsUsuario, "Nick", true));
             this.txtUsername.Location = new System.Drawing.Point(125, 32);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
@@ -122,6 +127,10 @@ namespace SIGEI.Vista
             this.codigoLabel.TabIndex = 13;
             this.codigoLabel.Text = "User:";
             // 
+            // bsUsuario
+            // 
+            this.bsUsuario.DataSource = typeof(SIGEI.Usuario);
+            // 
             // AutenticarUsuarioVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +142,7 @@ namespace SIGEI.Vista
             this.Text = "AutenticarUsuarioVista";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +157,6 @@ namespace SIGEI.Vista
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label codigoLabel;
+        private System.Windows.Forms.BindingSource bsUsuario;
     }
 }

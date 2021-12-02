@@ -52,13 +52,6 @@ namespace SIGEI.Vista
 
         }
 
-        private void garantiasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var vistaGarantias = new GarantiaVista();
-            vistaGarantias.MdiParent = this;
-            vistaGarantias.Show();
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -69,6 +62,42 @@ namespace SIGEI.Vista
             var vistaDepartamentos = new DepartamentoVista();
             vistaDepartamentos.MdiParent = this;
             vistaDepartamentos.Show();
+        }
+
+        public void HablitarOpciones(Usuario usuario)
+        {
+            txtBienvenida.Text = usuario.Empleado.Nombre;
+
+            if (usuario.Permiso.Equals("Administrador"))
+            {
+                //TODO:
+                equiposPerifericosToolStripMenuItem.Enabled = false;
+                equipoEmpleadoToolStripMenuItem.Enabled = false;
+                equipoToolStripMenuItem.Enabled = false;
+                perifericosToolStripMenuItem.Enabled = false;
+                
+                
+
+
+            } else if (usuario.Permiso.Equals("Recepcionista"))
+            {
+                //TODO: 
+                usuariosToolStripMenuItem.Enabled = false;
+                empleadosToolStripMenuItem.Enabled = false;
+                departamentosToolStripMenuItem.Enabled = false;
+                proveedoresToolStripMenuItem.Enabled = false;
+                
+
+
+
+
+            }
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,13 +7,13 @@ namespace SIGEI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class FirstCommit : IMigrationMetadata
+    public sealed partial class NuevasEntidades : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstCommit));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NuevasEntidades));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112020047282_FirstCommit"; }
+            get { return "202112022223182_NuevasEntidades"; }
         }
         
         string IMigrationMetadata.Source

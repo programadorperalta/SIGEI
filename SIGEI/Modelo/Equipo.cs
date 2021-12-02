@@ -15,13 +15,12 @@ namespace SIGEI
         public string Model { get; set; }
         public DateTime FechaAlta { get; set; }
         public DateTime FechaVencimientoGarantia { get; set; }
-        public int IdProveedor { get; set; }
-        public int IdDepartamento { get; set; }
         public ICollection<EquipoPeriferico> EquiposPerifericos { get; set; }
         public ICollection<Empleado> Empleados { get; set; }
 
         //prop Nav
         public virtual Departamento Departamento { get; set; }
         public virtual Proveedor Proveedor { get; set; }
+        
     }
 }

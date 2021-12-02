@@ -11,7 +11,9 @@ namespace SIGEI
         public int Id { get; set; }
         public string Nick { get; set; }
         public string Contraseña { get; set; }
-        public Empleado Empleado { get; set; }
-        public Rol Rol { get; set; }
+        public string Permiso { get; set; }
+        public virtual Empleado Empleado { get; set; }
+        
+
     }
 }

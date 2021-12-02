@@ -76,8 +76,9 @@ namespace SIGEI.Vista
             this.panel1.Controls.Add(this.codigoLabel);
             this.panel1.Location = new System.Drawing.Point(72, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 349);
+            this.panel1.Size = new System.Drawing.Size(657, 259);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox2
             // 
@@ -108,7 +109,7 @@ namespace SIGEI.Vista
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(334, 139);
+            this.button1.Location = new System.Drawing.Point(358, 137);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 22);
@@ -144,6 +145,9 @@ namespace SIGEI.Vista
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Administrativo",
+            "Recepcionista"});
             this.comboBox1.Location = new System.Drawing.Point(84, 91);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(191, 21);
@@ -152,7 +156,7 @@ namespace SIGEI.Vista
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(476, 306);
+            this.button2.Location = new System.Drawing.Point(476, 216);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 32);
@@ -169,9 +173,9 @@ namespace SIGEI.Vista
             this.baseLabel.Location = new System.Drawing.Point(16, 99);
             this.baseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baseLabel.Name = "baseLabel";
-            this.baseLabel.Size = new System.Drawing.Size(26, 13);
+            this.baseLabel.Size = new System.Drawing.Size(52, 13);
             this.baseLabel.TabIndex = 16;
-            this.baseLabel.Text = "Rol:";
+            this.baseLabel.Text = "Permisos:";
             // 
             // descripcionLabel
             // 
@@ -189,7 +193,7 @@ namespace SIGEI.Vista
             // confirmarBoton
             // 
             this.confirmarBoton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.confirmarBoton.Location = new System.Drawing.Point(573, 306);
+            this.confirmarBoton.Location = new System.Drawing.Point(573, 216);
             this.confirmarBoton.Margin = new System.Windows.Forms.Padding(2);
             this.confirmarBoton.Name = "confirmarBoton";
             this.confirmarBoton.Size = new System.Drawing.Size(73, 32);
@@ -236,7 +240,7 @@ namespace SIGEI.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 390);
+            this.ClientSize = new System.Drawing.Size(800, 301);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.panel1);
             this.Name = "UsuarioVista";
@@ -257,7 +261,6 @@ namespace SIGEI.Vista
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label baseLabel;
         private System.Windows.Forms.Label descripcionLabel;
@@ -265,5 +268,6 @@ namespace SIGEI.Vista
         private System.Windows.Forms.TextBox descripcionText;
         private System.Windows.Forms.TextBox codigoText;
         private System.Windows.Forms.Label codigoLabel;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
