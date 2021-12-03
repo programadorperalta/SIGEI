@@ -39,11 +39,13 @@ namespace SIGEI.Vista
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.txtCuit);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.baseLabel);
@@ -165,11 +167,21 @@ namespace SIGEI.Vista
             this.tituloLabel.TabIndex = 11;
             this.tituloLabel.Text = "GESTIONAR PROVEEDOR: ";
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(14, 146);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 32);
+            this.btnModificar.TabIndex = 23;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // ProveedorVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(772, 281);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tituloLabel);
@@ -194,5 +206,6 @@ namespace SIGEI.Vista
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label codigoLabel;
         private System.Windows.Forms.Label tituloLabel;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

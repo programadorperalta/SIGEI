@@ -14,12 +14,18 @@ namespace SIGEI.Vista
     public partial class EmpleadoVista : Form
     {
         private Repositorio _repositorio;
+        private int _codigo;
+        private Empleado _empleadoUpdate;
 
         public EmpleadoVista()
         {
             InitializeComponent();
             _repositorio = new Repositorio();
             cbDepartamentos.DataSource = _repositorio.ObtenerTodosLosDepartamentos();
+            cbEquipos.DataSource = _repositorio.ObtenerTodosLosEquipos();
+            cbEquipos.DisplayMember = "Description";
+            cbEquipos.Enabled = false;
+            btnModificar.Enabled = false;
         }
 
         private bool ControlarCamposVacios()
@@ -35,6 +41,24 @@ namespace SIGEI.Vista
             return bandera;
         }
 
+        public void MostrarEmpleado(int codigo, Empleado empleado)
+        {
+            btnModificar.Enabled = true;
+            confirmarBoton.Enabled = false;
+            txtLegajo.Enabled = false;
+            
+            
+            _codigo = codigo;
+
+            //llenar campos
+            txtNombre.Text = empleado.Nombre;
+            txtApellido.Text = empleado.Apellido;
+            txtLegajo.Text = empleado.Legajo.ToString();
+            txtDNI.Text = empleado.Dni.ToString();
+           
+        }
+
+
 
         private void LimpiarCampos()
         {
@@ -43,6 +67,8 @@ namespace SIGEI.Vista
             txtApellido.Text = asign;
             txtLegajo.Text = asign;
             txtDNI.Text = asign;
+            rbChekEquipo.Checked = false;
+            cbEquipos.Enabled = false;
         }
 
         private void tituloLabel_Click(object sender, EventArgs e)
@@ -57,7 +83,49 @@ namespace SIGEI.Vista
 
         private void confirmarBoton_Click(object sender, EventArgs e)
         {
-            if (ControlarCamposVacios())
+
+            if (ControlarCamposVacios() && rbChekEquipo.Checked)
+            {
+                cbEquipos.Enabled = true;
+                var nombre = txtNombre.Text;
+                var apellido = txtApellido.Text;
+                var dni = txtDNI.Text;
+                var legajo = Int32.Parse(txtLegajo.Text);
+                var equipo = cbEquipos.SelectedItem as Equipo;
+                var departamento = cbDepartamentos.SelectedItem as Departamento;
+
+                var empleado = new Empleado()
+                {
+                    Nombre = nombre,
+                    Apellido = apellido,
+                    Dni = dni,
+                    Legajo = legajo,
+                    Departamento = departamento,
+                    Equipo = equipo
+                };
+
+
+                var auditoria = new Auditoria()
+                {
+                    Entidad = "Alta de empleado - Equipo",
+                    FechaAlta = DateTime.Now,
+                    Datos = $"{empleado.Nombre}-{empleado.Legajo}"
+                };
+
+                _repositorio.AgregarEmpleado(empleado);
+                _repositorio.AgregarAuditoria(auditoria);
+                MessageBox.Show($"Se agrego con exito el empleado: {empleado.Nombre} - {empleado.Dni}");
+                LimpiarCampos();
+
+                this.Dispose();
+                var listaEmpleados = new ListarEmpleadosVista();
+                listaEmpleados.MdiParent = VistaPrincipal.ActiveForm;
+                listaEmpleados.Show();
+
+
+            }
+
+            else if (ControlarCamposVacios() && !rbChekEquipo.Checked)
             {
                 var nombre = txtNombre.Text;
                 var apellido = txtApellido.Text;
@@ -71,17 +139,91 @@ namespace SIGEI.Vista
                     Apellido = apellido,
                     Dni = dni,
                     Legajo = legajo,
-                    Departamento = departamento
+                    Departamento = departamento,
                 };
 
                 _repositorio.AgregarEmpleado(empleado);
                 MessageBox.Show($"Se agrego con exito el empleado: {empleado.Nombre} - {empleado.Dni}");
                 LimpiarCampos();
+
+                this.Dispose();
+                var listaEmpleados = new ListarEmpleadosVista();
+                listaEmpleados.MdiParent = VistaPrincipal.ActiveForm;
+                listaEmpleados.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Se deben completar todos los campos para continuar!");
             }
         }
 
         private void EmpleadoVista_Load_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbChekEquipo_CheckedChanged(object sender, EventArgs e)
+        {
+            cbEquipos.Enabled = true;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (rbChekEquipo.Checked)
+            {
+                _empleadoUpdate = new Empleado()
+                {
+                    Id = _codigo,
+                    Nombre = txtNombre.Text,
+                    Apellido = txtApellido.Text,
+                    Dni = txtDNI.Text,
+                    Legajo = Int32.Parse(txtLegajo.Text),
+                    Departamento = cbDepartamentos.SelectedItem as Departamento,
+                    Equipo = cbEquipos.SelectedItem as Equipo
+                };
+            }
+            else
+            {
+                _empleadoUpdate = new Empleado()
+                {
+                    Id = _codigo,
+                    Nombre = txtNombre.Text,
+                    Apellido = txtApellido.Text,
+                    Dni = txtDNI.Text,
+                    Legajo = Int32.Parse(txtLegajo.Text),
+                    Departamento = cbDepartamentos.SelectedItem as Departamento
+                };
+            }
+
+            _repositorio.ModificarEmpleado(_codigo, _empleadoUpdate);
+
+            var auditoria = new Auditoria()
+            {
+                Entidad = "Modificacion de empleado",
+                FechaAlta = DateTime.Now,
+                Datos = $"Se modifico el empleado: {_empleadoUpdate.Legajo}"
+            };
+
+            _repositorio.AgregarAuditoria(auditoria);
+
+
+
+            MessageBox.Show("Se actualizo el registro con exito");
+            this.Dispose();
+            var listaEmpleado = new ListarEmpleadosVista();
+            listaEmpleado.MdiParent = VistaPrincipal.ActiveForm;
+            listaEmpleado.Show();
 
         }
     }

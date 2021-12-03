@@ -71,10 +71,9 @@ namespace SIGEI.Vista
             if (usuario.Permiso.Equals("Administrador"))
             {
                 //TODO:
-                equiposPerifericosToolStripMenuItem.Enabled = false;
-                equipoEmpleadoToolStripMenuItem.Enabled = false;
-                equipoToolStripMenuItem.Enabled = false;
-                perifericosToolStripMenuItem.Enabled = false;
+                equiposToolStripMenuItem.Enabled = false;
+                perifericosToolStripMenuItem1.Enabled = false;
+                equipoPerifericoToolStripMenuItem.Enabled = false;
                 
                 
 
@@ -82,14 +81,10 @@ namespace SIGEI.Vista
             } else if (usuario.Permiso.Equals("Recepcionista"))
             {
                 //TODO: 
-                usuariosToolStripMenuItem.Enabled = false;
-                empleadosToolStripMenuItem.Enabled = false;
-                departamentosToolStripMenuItem.Enabled = false;
-                proveedoresToolStripMenuItem.Enabled = false;
-                
-
-
-
+                empleadosToolStripMenuItem1.Enabled = false;
+                proveedoresToolStripMenuItem1.Enabled = false;
+                departamentosToolStripMenuItem1.Enabled = false;
+                usuariosToolStripMenuItem1.Enabled = false;
 
             }
            
@@ -98,6 +93,69 @@ namespace SIGEI.Vista
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void equiposPerifericosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vistaEquipoPeriferico = new EquipoPerifericoVista();
+            vistaEquipoPeriferico.MdiParent = this;
+            vistaEquipoPeriferico.Show();
+        }
+
+        private void verHistorialDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var vistaHistorialDeCambios = new HistorialCambiosVista();
+            vistaHistorialDeCambios.MdiParent = this;
+            vistaHistorialDeCambios.Show();
+        }
+
+        private void equiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var listadoEquipos = new ListarVista();
+            listadoEquipos.MdiParent = this;
+            listadoEquipos.Show();
+        }
+
+        private void perifericosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var listadoPerifericos = new ListarPerifericosVista();
+            listadoPerifericos.MdiParent = this;
+            listadoPerifericos.Show();
+        }
+
+        private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var listadoEmpleados = new ListarEmpleadosVista();
+            listadoEmpleados.MdiParent = this;
+            listadoEmpleados.Show();
+        }
+
+        private void proveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var listadoProveedores = new ListarProveedoresVista();
+            listadoProveedores.MdiParent = this;
+            listadoProveedores.Show();
+        }
+
+        private void departamentosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var listadoDepartamentos = new ListarDepartamentosVista();
+            listadoDepartamentos.MdiParent = this;
+            listadoDepartamentos.Show();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var listadoUsuarios = new ListarUsuariosVissta();
+            listadoUsuarios.MdiParent = this;
+            listadoUsuarios.Show();
+        }
+
+        private void equipoPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var listadoEquiposPerifericos = new ListarEquipoPerifericosVista();
+            listadoEquiposPerifericos.MdiParent = this;
+            listadoEquiposPerifericos.Show();
         }
     }
 }

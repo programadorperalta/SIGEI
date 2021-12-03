@@ -14,11 +14,15 @@ namespace SIGEI.Vista
     public partial class ProveedorVista : Form
     {
         private Repositorio _repositorio;
+        private int _codigo;
+        private Proveedor _proveedorUpdate;
+
 
         public ProveedorVista()
         {
             InitializeComponent();
             _repositorio = new Repositorio();
+            btnModificar.Enabled = false;
         }
 
         private bool ControlarCamposVacios()
@@ -33,6 +37,20 @@ namespace SIGEI.Vista
 
             return bandera; 
         }
+
+        public void MostrarProveedor(int codigo, Proveedor proveedor)
+        {
+            btnModificar.Enabled = true;
+            confirmarBoton.Enabled = false;
+
+            _codigo = codigo;
+            //llenar campos 
+            txtCuit.Text = proveedor.Cuit;
+            txtNombre.Text = proveedor.Nombre;
+            txtRazonSocial.Text = proveedor.RazonSocial;
+
+        }
+
 
         private void LimpiarCampos()
         {
@@ -57,15 +75,64 @@ namespace SIGEI.Vista
                     Cuit = cuit
                 };
 
+                var auditoria = new Auditoria()
+                {
+                    Entidad = "Alta de proveedor",
+                    FechaAlta = DateTime.Now,
+                    Datos = $"{proveedor.Nombre}-{proveedor.Cuit}"
+                };
+
                 _repositorio.AgregarProveedor(proveedor);
+                _repositorio.AgregarAuditoria(auditoria);
+
+
                 MessageBox.Show($"Se agrego con exito el proveedor {proveedor.Nombre}");
-                LimpiarCampos(); 
+                LimpiarCampos();
+
+                this.Dispose();
+                var listaProveedores = new ListarProveedoresVista();
+                listaProveedores.MdiParent = VistaPrincipal.ActiveForm;
+                listaProveedores.Show();
+
+
             } 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            _proveedorUpdate = new Proveedor()
+            {
+                Id = _codigo,
+                Nombre = txtNombre.Text,
+                RazonSocial = txtRazonSocial.Text,
+                Cuit = txtCuit.Text
+            };
+
+            _repositorio.ModificarProveedor(_codigo, _proveedorUpdate);
+
+
+            var auditoria = new Auditoria()
+            {
+                Entidad = "Modificacion de Proveedor",
+                FechaAlta = DateTime.Now,
+                Datos = $"Se modifico el proveedor: {_proveedorUpdate.Nombre}"
+            };
+
+            _repositorio.AgregarAuditoria(auditoria);
+
+
+            MessageBox.Show("Se actualizo el registro con exito");
+            this.Dispose();
+
+            var listaproveedores = new ListarProveedoresVista();
+            listaproveedores.MdiParent = VistaPrincipal.ActiveForm;
+            listaproveedores.Show();
+
         }
     }
 }

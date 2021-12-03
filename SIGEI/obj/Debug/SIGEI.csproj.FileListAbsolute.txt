@@ -10,7 +10,6 @@ C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.pdb
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.AgregarEquipoVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.AutenticarUsuarioVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.DepartamentoVista.resources
-C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EmpleadoEquipoVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EmpleadoVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.EquipoPerifericoVista.resources
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarVista.resources
@@ -48,4 +47,11 @@ C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.xml
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.csproj.CopyComplete
-C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Migrations.NuevasEntidades.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.HistorialCambiosVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarPerifericosVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarEmpleadosVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Migrations.Nuevas_Entidades.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarProveedoresVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarDepartamentosVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarEquipoPerifericosVista.resources
+C:\Users\PERALTA-PC\source\repos\SIGEI\SIGEI\obj\Debug\SIGEI.Vista.ListarUsuariosVissta.resources

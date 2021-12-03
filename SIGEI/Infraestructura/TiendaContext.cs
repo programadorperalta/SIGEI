@@ -21,14 +21,10 @@ namespace SIGEI.Infraestructura
                 .Remove<PluralizingTableNameConvention>();
 
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Entity<EquipoPeriferico>()
-            //    .HasKey(x => new { x.Id })
-            //    .HasRequired(x => new { x.IdEquipo, x.IdPeriferico })
-            //    .WithMany();
+           
         }
 
         //Entities
-        public DbSet<Equipo> Producto { get; set; }
         public DbSet<EquipoPeriferico> EquipoPerifericos { get; set; }
         public DbSet<Periferico> Periferico { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
@@ -36,6 +32,8 @@ namespace SIGEI.Infraestructura
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Auditoria> Auditorias { get; set; }
+        public DbSet<Equipo> Equipos { get; set; }
+
 
 
     }

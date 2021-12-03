@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class NuevasEntidades : DbMigration
+    public partial class Nuevas_Entidades : DbMigration
     {
         public override void Up()
         {
@@ -37,7 +37,7 @@
                         Legajo = c.Int(nullable: false),
                         Dni = c.String(),
                         Departamento_Id = c.Int(),
-                        Equipo_Id = c.Int(nullable: true),
+                        Equipo_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Departamento", t => t.Departamento_Id)
@@ -53,6 +53,7 @@
                         SerielNumber = c.String(),
                         Description = c.String(),
                         Model = c.String(),
+                        Marca = c.String(),
                         FechaAlta = c.DateTime(nullable: false),
                         FechaVencimientoGarantia = c.DateTime(nullable: false),
                         Departamento_Id = c.Int(),
@@ -89,7 +90,8 @@
                         Modelo = c.String(),
                         Descripcion = c.String(),
                         NumeroDeSerie = c.String(),
-                        IdProveedor = c.Int(nullable: false),
+                        FechaAlta = c.DateTime(nullable: false),
+                        FechaVencimientoGarantia = c.DateTime(nullable: false),
                         Proveedor_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)

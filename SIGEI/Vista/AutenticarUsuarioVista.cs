@@ -38,6 +38,15 @@ namespace SIGEI.Vista
                 {
 
                     MessageBox.Show($"Bienvenid@: {usuario.Empleado.Nombre} - {usuario.Empleado.Legajo}");
+
+                    var auditoria = new Auditoria()
+                    {
+                        Entidad = "Inicio de sesion",
+                        FechaAlta = DateTime.Now,
+                        Datos = $"{usuario.Nick}-{usuario.Permiso}"
+                    };
+
+                    _repositorio.AgregarAuditoria(auditoria);
                     vistaPrincipal.Visible = true;
                     vistaPrincipal.HablitarOpciones(usuario);
                     LimpiarCampos();

@@ -13,9 +13,10 @@ namespace SIGEI
         public string Modelo { get; set; }
         public string Descripcion { get; set; }
         public string NumeroDeSerie { get; set; }
-        public int IdProveedor { get; set; }
+        public DateTime FechaAlta { get; set; }
+        public DateTime FechaVencimientoGarantia { get; set; }
+        
         public ICollection<EquipoPeriferico> EquiposPerifericos { get; set; }
-
         public virtual Proveedor Proveedor { get; set; }
     }
 }

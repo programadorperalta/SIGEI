@@ -30,6 +30,9 @@ namespace SIGEI.Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbChekEquipo = new System.Windows.Forms.RadioButton();
+            this.cbEquipos = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbDepartamentos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLegajo = new System.Windows.Forms.TextBox();
@@ -43,11 +46,16 @@ namespace SIGEI.Vista
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.codigoLabel = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.rbChekEquipo);
+            this.panel1.Controls.Add(this.cbEquipos);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbDepartamentos);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtLegajo);
@@ -60,10 +68,46 @@ namespace SIGEI.Vista
             this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.codigoLabel);
-            this.panel1.Location = new System.Drawing.Point(71, 65);
+            this.panel1.Location = new System.Drawing.Point(36, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 435);
+            this.panel1.Size = new System.Drawing.Size(746, 319);
             this.panel1.TabIndex = 14;
+            // 
+            // rbChekEquipo
+            // 
+            this.rbChekEquipo.AutoSize = true;
+            this.rbChekEquipo.Location = new System.Drawing.Point(19, 191);
+            this.rbChekEquipo.Name = "rbChekEquipo";
+            this.rbChekEquipo.Size = new System.Drawing.Size(227, 17);
+            this.rbChekEquipo.TabIndex = 33;
+            this.rbChekEquipo.TabStop = true;
+            this.rbChekEquipo.Text = "¿Desea agregarle un Equipo al Empleado?";
+            this.rbChekEquipo.UseVisualStyleBackColor = true;
+            this.rbChekEquipo.CheckedChanged += new System.EventHandler(this.rbChekEquipo_CheckedChanged);
+            // 
+            // cbEquipos
+            // 
+            this.cbEquipos.FormattingEnabled = true;
+            this.cbEquipos.Items.AddRange(new object[] {
+            ""});
+            this.cbEquipos.Location = new System.Drawing.Point(125, 225);
+            this.cbEquipos.Name = "cbEquipos";
+            this.cbEquipos.Size = new System.Drawing.Size(209, 21);
+            this.cbEquipos.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 233);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Equipo:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbDepartamentos
             // 
@@ -96,7 +140,7 @@ namespace SIGEI.Vista
             this.txtLegajo.Location = new System.Drawing.Point(125, 117);
             this.txtLegajo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLegajo.Name = "txtLegajo";
-            this.txtLegajo.Size = new System.Drawing.Size(464, 20);
+            this.txtLegajo.Size = new System.Drawing.Size(554, 20);
             this.txtLegajo.TabIndex = 24;
             // 
             // label1
@@ -120,16 +164,16 @@ namespace SIGEI.Vista
             this.txtDNI.Location = new System.Drawing.Point(125, 86);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(464, 20);
+            this.txtDNI.Size = new System.Drawing.Size(554, 20);
             this.txtDNI.TabIndex = 22;
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(469, 391);
+            this.button2.Location = new System.Drawing.Point(551, 264);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 32);
+            this.button2.Size = new System.Drawing.Size(73, 28);
             this.button2.TabIndex = 21;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -163,10 +207,10 @@ namespace SIGEI.Vista
             // confirmarBoton
             // 
             this.confirmarBoton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.confirmarBoton.Location = new System.Drawing.Point(572, 391);
+            this.confirmarBoton.Location = new System.Drawing.Point(653, 263);
             this.confirmarBoton.Margin = new System.Windows.Forms.Padding(2);
             this.confirmarBoton.Name = "confirmarBoton";
-            this.confirmarBoton.Size = new System.Drawing.Size(73, 32);
+            this.confirmarBoton.Size = new System.Drawing.Size(73, 30);
             this.confirmarBoton.TabIndex = 20;
             this.confirmarBoton.Text = "Confirmar";
             this.confirmarBoton.UseVisualStyleBackColor = true;
@@ -180,7 +224,7 @@ namespace SIGEI.Vista
             this.txtApellido.Location = new System.Drawing.Point(125, 57);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(464, 20);
+            this.txtApellido.Size = new System.Drawing.Size(554, 20);
             this.txtApellido.TabIndex = 12;
             // 
             // txtNombre
@@ -191,7 +235,7 @@ namespace SIGEI.Vista
             this.txtNombre.Location = new System.Drawing.Point(125, 32);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(464, 20);
+            this.txtNombre.Size = new System.Drawing.Size(554, 20);
             this.txtNombre.TabIndex = 11;
             // 
             // codigoLabel
@@ -212,7 +256,7 @@ namespace SIGEI.Vista
             this.tituloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tituloLabel.AutoSize = true;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(368, 18);
+            this.tituloLabel.Location = new System.Drawing.Point(372, 9);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(92, 17);
@@ -220,11 +264,22 @@ namespace SIGEI.Vista
             this.tituloLabel.Text = "EMPLEADO";
             this.tituloLabel.Click += new System.EventHandler(this.tituloLabel_Click);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(448, 265);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(78, 26);
+            this.btnModificar.TabIndex = 34;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // EmpleadoVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 512);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(829, 373);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tituloLabel);
             this.Name = "EmpleadoVista";
@@ -252,5 +307,9 @@ namespace SIGEI.Vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbDepartamentos;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbEquipos;
+        private System.Windows.Forms.RadioButton rbChekEquipo;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

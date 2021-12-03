@@ -99,6 +99,7 @@ namespace SIGEI.Vista
             this.txtPass.Location = new System.Drawing.Point(125, 57);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(153, 20);
             this.txtPass.TabIndex = 12;
             // 
@@ -135,6 +136,7 @@ namespace SIGEI.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(582, 269);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.panel1);

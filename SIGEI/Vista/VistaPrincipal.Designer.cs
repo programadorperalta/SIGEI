@@ -31,19 +31,18 @@ namespace SIGEI.Vista
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perifericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equiposPerifericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verHistorialDeCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBienvenida = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.perifericosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipoPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,87 +61,40 @@ namespace SIGEI.Vista
             // archivosToolStripMenuItem
             // 
             this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perifericosToolStripMenuItem,
-            this.verToolStripMenuItem,
+            this.listarToolStripMenuItem,
             this.verHistorialDeCambiosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
             this.archivosToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivosToolStripMenuItem.Text = "Archivo";
             // 
-            // perifericosToolStripMenuItem
-            // 
-            this.perifericosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.equiposPerifericosToolStripMenuItem,
-            this.equipoEmpleadoToolStripMenuItem});
-            this.perifericosToolStripMenuItem.Name = "perifericosToolStripMenuItem";
-            this.perifericosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.perifericosToolStripMenuItem.Text = "Vincular";
-            // 
-            // equiposPerifericosToolStripMenuItem
-            // 
-            this.equiposPerifericosToolStripMenuItem.Name = "equiposPerifericosToolStripMenuItem";
-            this.equiposPerifericosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.equiposPerifericosToolStripMenuItem.Text = "Equipos-Perifericos";
-            // 
-            // equipoEmpleadoToolStripMenuItem
-            // 
-            this.equipoEmpleadoToolStripMenuItem.Name = "equipoEmpleadoToolStripMenuItem";
-            this.equipoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.equipoEmpleadoToolStripMenuItem.Text = "Equipo-Empleado";
-            // 
-            // verToolStripMenuItem
-            // 
-            this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.equipoToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.proveedoresToolStripMenuItem,
-            this.departamentosToolStripMenuItem});
-            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.verToolStripMenuItem.Text = "Gestion";
-            // 
-            // equipoToolStripMenuItem
-            // 
-            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
-            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.equipoToolStripMenuItem.Text = "Equipos o Perifericos";
-            this.equipoToolStripMenuItem.Click += new System.EventHandler(this.equipoToolStripMenuItem_Click);
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
-            // 
-            // departamentosToolStripMenuItem
-            // 
-            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.departamentosToolStripMenuItem.Text = "Departamentos";
-            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
-            // 
             // verHistorialDeCambiosToolStripMenuItem
             // 
             this.verHistorialDeCambiosToolStripMenuItem.Name = "verHistorialDeCambiosToolStripMenuItem";
             this.verHistorialDeCambiosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.verHistorialDeCambiosToolStripMenuItem.Text = "Ver Historial de Cambios";
+            this.verHistorialDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.verHistorialDeCambiosToolStripMenuItem_Click);
+            // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.equiposToolStripMenuItem,
+            this.perifericosToolStripMenuItem1,
+            this.empleadosToolStripMenuItem1,
+            this.proveedoresToolStripMenuItem1,
+            this.departamentosToolStripMenuItem1,
+            this.usuariosToolStripMenuItem1,
+            this.equipoPerifericoToolStripMenuItem});
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.listarToolStripMenuItem.Text = "Operaciones";
+            // 
+            // equiposToolStripMenuItem
+            // 
+            this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equiposToolStripMenuItem.Text = "Equipos";
+            this.equiposToolStripMenuItem.Click += new System.EventHandler(this.equiposToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -169,6 +121,48 @@ namespace SIGEI.Vista
             this.label1.TabIndex = 5;
             this.label1.Text = "Bienvenid@: ";
             // 
+            // perifericosToolStripMenuItem1
+            // 
+            this.perifericosToolStripMenuItem1.Name = "perifericosToolStripMenuItem1";
+            this.perifericosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.perifericosToolStripMenuItem1.Text = "Perifericos";
+            this.perifericosToolStripMenuItem1.Click += new System.EventHandler(this.perifericosToolStripMenuItem1_Click);
+            // 
+            // empleadosToolStripMenuItem1
+            // 
+            this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
+            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem1.Text = "Empleados";
+            this.empleadosToolStripMenuItem1.Click += new System.EventHandler(this.empleadosToolStripMenuItem1_Click);
+            // 
+            // proveedoresToolStripMenuItem1
+            // 
+            this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem1.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem1.Click += new System.EventHandler(this.proveedoresToolStripMenuItem1_Click);
+            // 
+            // departamentosToolStripMenuItem1
+            // 
+            this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
+            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.departamentosToolStripMenuItem1.Text = "Departamentos";
+            this.departamentosToolStripMenuItem1.Click += new System.EventHandler(this.departamentosToolStripMenuItem1_Click);
+            // 
+            // usuariosToolStripMenuItem1
+            // 
+            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem1.Text = "Usuarios";
+            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
+            // 
+            // equipoPerifericoToolStripMenuItem
+            // 
+            this.equipoPerifericoToolStripMenuItem.Name = "equipoPerifericoToolStripMenuItem";
+            this.equipoPerifericoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equipoPerifericoToolStripMenuItem.Text = "Equipo-Periferico";
+            this.equipoPerifericoToolStripMenuItem.Click += new System.EventHandler(this.equipoPerifericoToolStripMenuItem_Click);
+            // 
             // VistaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,18 +186,17 @@ namespace SIGEI.Vista
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perifericosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equiposPerifericosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equipoEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equipoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verHistorialDeCambiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
         private System.Windows.Forms.TextBox txtBienvenida;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equiposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perifericosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem equipoPerifericoToolStripMenuItem;
     }
 }

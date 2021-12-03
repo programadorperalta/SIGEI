@@ -59,9 +59,9 @@
     <Compile Include="Base de Datos\Repositorio.cs" />
     <Compile Include="Infraestructura\TiendaContext.cs" />
     <Compile Include="Memoria\Inventario.cs" />
-    <Compile Include="Migrations\202112022223182_NuevasEntidades.cs" />
-    <Compile Include="Migrations\202112022223182_NuevasEntidades.designer.cs">
-      <DependentUpon>202112022223182_NuevasEntidades.cs</DependentUpon>
+    <Compile Include="Migrations\202112030606154_Nuevas_Entidades.cs" />
+    <Compile Include="Migrations\202112030606154_Nuevas_Entidades.designer.cs">
+      <DependentUpon>202112030606154_Nuevas_Entidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auditoria.cs" />
@@ -74,6 +74,46 @@
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIGEIDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SIGEIDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGEIDBDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vista\AgregarEquipoVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,12 +132,6 @@
     <Compile Include="Vista\DepartamentoVista.Designer.cs">
       <DependentUpon>DepartamentoVista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\EmpleadoEquipoVista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\EmpleadoEquipoVista.Designer.cs">
-      <DependentUpon>EmpleadoEquipoVista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\EmpleadoVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +143,48 @@
     </Compile>
     <Compile Include="Vista\EquipoPerifericoVista.Designer.cs">
       <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HistorialCambiosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\HistorialCambiosVista.Designer.cs">
+      <DependentUpon>HistorialCambiosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarDepartamentosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarDepartamentosVista.Designer.cs">
+      <DependentUpon>ListarDepartamentosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarEmpleadosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarEmpleadosVista.Designer.cs">
+      <DependentUpon>ListarEmpleadosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarEquipoPerifericosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarEquipoPerifericosVista.Designer.cs">
+      <DependentUpon>ListarEquipoPerifericosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarPerifericosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarPerifericosVista.Designer.cs">
+      <DependentUpon>ListarPerifericosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarProveedoresVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarProveedoresVista.Designer.cs">
+      <DependentUpon>ListarProveedoresVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ListarUsuariosVissta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListarUsuariosVissta.Designer.cs">
+      <DependentUpon>ListarUsuariosVissta.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ListarVista.cs">
       <SubType>Form</SubType>
@@ -134,8 +210,8 @@
     <Compile Include="Vista\VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202112022223182_NuevasEntidades.resx">
-      <DependentUpon>202112022223182_NuevasEntidades.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112030606154_Nuevas_Entidades.resx">
+      <DependentUpon>202112030606154_Nuevas_Entidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,14 +231,32 @@
     <EmbeddedResource Include="Vista\DepartamentoVista.resx">
       <DependentUpon>DepartamentoVista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\EmpleadoEquipoVista.resx">
-      <DependentUpon>EmpleadoEquipoVista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\EmpleadoVista.resx">
       <DependentUpon>EmpleadoVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EquipoPerifericoVista.resx">
       <DependentUpon>EquipoPerifericoVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistorialCambiosVista.resx">
+      <DependentUpon>HistorialCambiosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarDepartamentosVista.resx">
+      <DependentUpon>ListarDepartamentosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarEmpleadosVista.resx">
+      <DependentUpon>ListarEmpleadosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarEquipoPerifericosVista.resx">
+      <DependentUpon>ListarEquipoPerifericosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarPerifericosVista.resx">
+      <DependentUpon>ListarPerifericosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarProveedoresVista.resx">
+      <DependentUpon>ListarProveedoresVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListarUsuariosVissta.resx">
+      <DependentUpon>ListarUsuariosVissta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ListarVista.resx">
       <DependentUpon>ListarVista.cs</DependentUpon>
@@ -177,8 +271,12 @@
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Auditoria.datasource" />
     <None Include="Properties\DataSources\Departamento.datasource" />
+    <None Include="Properties\DataSources\Empleado.datasource" />
+    <None Include="Properties\DataSources\Equipo.datasource" />
     <None Include="Properties\DataSources\Garantia.datasource" />
+    <None Include="Properties\DataSources\Periferico.datasource" />
     <None Include="Properties\DataSources\Proveedor.datasource" />
     <None Include="Properties\DataSources\Usuario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -190,6 +288,94 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SIGEIDBDataSet.xsc">
+      <DependentUpon>SIGEIDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet.xss">
+      <DependentUpon>SIGEIDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet1.xsc">
+      <DependentUpon>SIGEIDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet1.xss">
+      <DependentUpon>SIGEIDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet2.xsc">
+      <DependentUpon>SIGEIDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet2.xss">
+      <DependentUpon>SIGEIDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet3.xsc">
+      <DependentUpon>SIGEIDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet3.xss">
+      <DependentUpon>SIGEIDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet4.xsc">
+      <DependentUpon>SIGEIDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet4.xss">
+      <DependentUpon>SIGEIDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet5.xsc">
+      <DependentUpon>SIGEIDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet5.xss">
+      <DependentUpon>SIGEIDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet6.xsc">
+      <DependentUpon>SIGEIDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet6.xss">
+      <DependentUpon>SIGEIDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet7.xsc">
+      <DependentUpon>SIGEIDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SIGEIDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIGEIDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIGEIDBDataSet7.xss">
+      <DependentUpon>SIGEIDBDataSet7.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
